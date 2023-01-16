@@ -1,9 +1,20 @@
 @extends('layout.mainlayout')
 
 @section('content')
-<h1>Home</h1>
-<a href="{{url('/admin')}}">go to admin</a>
-<a href="{{url('/home')}}">go to home</a>
-<a href="{{url('/member')}}">go to member</a>
+<div class="bg-light p-5 rounded">
+        @auth
+
+        
+        <h1>Wellcome {{ Auth::user()->username }}</h1>
+        <p class="lead">Only authenticated users can access this section.</p>
+        <a class="btn btn-lg btn-primary" href="https://codeanddeploy.com" role="button">View more tutorials here &raquo;</a>
+        @endauth
+
+
+        @guest
+        <h1>Homepage</h1>
+        <p class="lead">Your viewing the home page. Please login to view the restricted data.</p>
+        @endguest
+    </div>
     
 @endsection

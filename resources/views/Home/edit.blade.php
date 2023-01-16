@@ -3,6 +3,9 @@
 @section('content')
 
 <section  class=" mb-3 mt-3 px-3 py-3" style="background-color: #eee;">
+
+<h1> Edit Profile</h1>
+
 <form action="{{ route('create.profile') }}" method="POST">
   @csrf
   <div class="container  mb-3 mt-3">

@@ -1,7 +1,19 @@
 @extends('layout.mainlayout')
 
 @section('content')
+@if (Session::has('message'))
 
+<script type="text/javascript">
+
+Swal.fire({
+  icon: 'error',
+  title: 'Oops Some Thing Wrong...',
+  text: 'เกิดข้อผิดพลาดบางอย่างกรุณาทำรายการใหม่ ',
+  footer: '<a href="">Why do I have this issue?</a>'
+});
+
+</script>
+@endif
 <section  class=" mb-3 mt-3 px-3 py-3" style="background-color: #eee;">
   <div class="container  mb-3 mt-3">
      <div class="row">
