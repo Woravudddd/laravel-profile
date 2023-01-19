@@ -10,7 +10,7 @@ class Profile extends Model
     use HasFactory;
 
     protected $fillable = [
-        
+        'create_by',
         'name',
         'position',
         'address',
@@ -29,7 +29,7 @@ class Profile extends Model
         'progressvalue3',
         'progressvalue4',
         'progressvalue5',
-
+        
     ];
 
     

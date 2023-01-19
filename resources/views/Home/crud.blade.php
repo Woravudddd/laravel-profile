@@ -149,7 +149,7 @@
       </div>
     </div>
   </div>
-
+  <input type="hidden"  id="create_by" name="create_by" value="{{ Auth::user()->username }}">
   <button class="btn btn-success"  type="submit" id="submit" name="submit">บันทึก</button>
 
 </form>
