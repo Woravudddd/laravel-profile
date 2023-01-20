@@ -21,11 +21,11 @@
       {{auth()->user()->name}}
      <li  class="nav-link">
         <i class="bx bx-user-check"></i>
-        <a href="{{ route('profile.login') }}">   <span class="mx-2">Profile</span></a>
+        <a href="{{ route('profile.login') }}">   <span class="mx-2">All Profile</span></a>
       </li>
      <li class="nav-link">
-      <a href="/member">  <i class="bx bx-conversation"></i>
-        <span class="mx-2">Contact</span></a>
+      <a href="{{ route('editprofilepage', Auth::user()->username ) }}">  <i class="bx bx-conversation"></i>
+        <span class="mx-2">Edit</span></a>
       </li>
       <li class="nav-link">
       <a href="/home/createitem">  <i class="bx bx-conversation"></i>
@@ -33,7 +33,7 @@
       </li>
       <li class="nav-link">
       <a href="{{ route('cardprofile.login') }}">  <i class="bx bx-conversation"></i>
-        <span class="mx-2">Profile1</span></a>
+        <span class="mx-2">Your Profile</span></a>
       </li>
     </ul>
     @endauth
@@ -47,7 +47,7 @@
       <a class="btn border-0" id="menu-btn"><i class="bx bx-menu"></i></a>
      
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Your Profile</a>
   
     @auth
         {{auth()->user()->name}}

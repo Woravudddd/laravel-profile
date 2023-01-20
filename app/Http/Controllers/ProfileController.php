@@ -19,7 +19,7 @@ class ProfileController extends Controller
 
         
                 
-        $profile = DB::table('profiles')->where('create_by' , $user_name )->get();
+        $profile = DB::table('profiles')->get();
         
         
         return view('Home.profile',compact('profile'));
@@ -42,6 +42,18 @@ class ProfileController extends Controller
 
 
            return view('Home.profilepage',compact('profiles'))->with('success');
+
+    }
+
+    public function editProfileId($username){
+        
+
+        $profilecard = DB::table('users')->where('username' ,$username )->first();
+        
+
+      
+
+        return view('Home.editProfilePage',compact('profilecard'));
 
     }
 }

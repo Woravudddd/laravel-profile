@@ -3,7 +3,7 @@
 @section('content')
 
 <section  class=" mb-3 mt-3 px-3 py-3" style="background-color: #eee;">
-
+<a href="{{ url()->previous() }}" class="btn btn-primary" >back</a>
 <h1> Edit Profile</h1>
 
 <form action="{{ route('update.profile',$user_id->id )}}" method="POST">

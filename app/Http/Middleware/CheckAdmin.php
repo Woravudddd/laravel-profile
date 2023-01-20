@@ -16,7 +16,7 @@ class CheckAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-
+     
         if(!$request->check == 'Perm'){
             return redirect('/home');
         }

@@ -68,7 +68,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::post('/profile/update/{id}' , [CreateProfileController::class, 'updateProfile'])->name('update.profile');
         Route::post('/profile/delete/{id}',[CreateProfileController::class , 'destroy'])->name('destroy.profile');
         Route::get('/card/profile/{id}' , [ProfileController::class , 'profileincard'])->name('profileincard.card');
-
+        Route::get('/profile/editprofile/{username}' , [ProfileController::class , 'editProfileId'])->name('editprofilepage');
 
     });
 });
