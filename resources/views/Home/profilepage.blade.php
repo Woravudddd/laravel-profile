@@ -14,9 +14,9 @@ Swal.fire({
 
 </script>
 @endif
-@foreach($profile as $profiles)
-<section  class=" mb-3 mt-3 px-3 py-3" style="background-color: #eee;">
 
+<section  class=" mb-3 mt-3 px-3 py-3" style="background-color: #eee;">
+<a href="{{ url()->previous() }}" class="btn btn-primary" >back</a>
   <div class="container  mb-3 mt-3">
      <div class="row">
       <div class="col-lg-4">
@@ -223,5 +223,5 @@ Swal.fire({
  
 </section>
 
- @endforeach
+
 @endsection

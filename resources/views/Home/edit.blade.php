@@ -6,7 +6,8 @@
 
 <h1> Edit Profile</h1>
 
-<form action="{{ route('create.profile') }}" method="POST">
+<form action="{{ route('update.profile',$user_id->id )}}" method="POST">
+  
   @csrf
   <div class="container  mb-3 mt-3">
      <div class="row">
@@ -15,9 +16,9 @@
           <div class="card-body text-center">
             <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
               class="rounded-circle img-fluid" style="width: 150px;">
-            <input  type="text" class="form-control mb-1 my-3" placeholder="Name" id="name" name="name"> 
-            <input  type="text" class="form-control mb-1" placeholder="Position" id="position" name="position">
-            <input  type="text" class="form-control mb-1" placeholder="Address" id="address" name="address">
+            <input  type="text" class="form-control mb-1 my-3" placeholder="Name" id="name" name="name" value="{{ $user_id->name }}"> 
+            <input  type="text" class="form-control mb-1" placeholder="Position" id="position" name="position" value="{{ $user_id->position }}">
+            <input  type="text" class="form-control mb-1" placeholder="Address" id="address" name="address" value="{{ $user_id->address }}">
             
           </div>
         </div>
@@ -41,7 +42,7 @@
                 <p class="mb-0">Full Name</p>
               </div>
               <div class="col-sm-9">
-              <input  type="text" class="form-control mb-0" placeholder="Name" id='name1' name='name1'>
+              <input  type="text" class="form-control mb-0" placeholder="Name" id='name1' name='name1' value=" {{ $user_id->name1}}">
               </div>
             </div>
             <hr>
@@ -50,7 +51,7 @@
                 <p class="mb-0">Email</p>
               </div>
               <div class="col-sm-9">
-              <input  type="text" class="form-control mb-0" placeholder="Email" id='email1' name='email1'>
+              <input  type="text" class="form-control mb-0" placeholder="Email" id='email1' name='email1' value="{{ $user_id->email1 }}">
               </div>
             </div>
             <hr>
@@ -59,7 +60,7 @@
                 <p class="mb-0">Phone</p>
               </div>
               <div class="col-sm-9">
-              <input  type="text" class="form-control mb-0" placeholder="Phone" id='phone1' name='phone1'>
+              <input  type="text" class="form-control mb-0" placeholder="Phone" id='phone1' name='phone1' value="{{ $user_id->phone1 }}">
               </div>
             </div>
    
@@ -70,7 +71,7 @@
                 <p class="mb-0">Address</p>
               </div>
               <div class="col-sm-9">
-              <input  type="text" class="form-control mb-0" placeholder="Address" id='address1' name='address1'>
+              <input  type="text" class="form-control mb-0" placeholder="Address" id='address1' name='address1' value="{{ $user_id->address1 }}">
               </div>
             </div>
           </div>
@@ -82,33 +83,33 @@
                 <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
                 </p>
                 <p class="mb-1" style="font-size: .77rem;">Web Design</p>
-                <progress value="5" max="100" class="media-progress"></progress>
+                <progress value="{{ $user_id->progressvalue }}" max="100"  class="media-progress"></progress>
                 <div id="progress-value"></div>
 
                 <input type="hidden" id="progressvalue" name="progressvalue">
 
                 <p class="mt-1 mb-1" style="font-size: .77rem;">Website Markup</p>
-                <progress value="5" max="100" class="media-progress2"></progress>
+                <progress value="{{ $user_id->progressvalue2 }}" max="100" class="media-progress2"></progress>
                 <div id="progress-value2"></div>
 
                 <input type="hidden"  id="progressvalue2" name="progressvalue2">
 
 
                 <p class="mt-1 mb-1" style="font-size: .77rem;">One Page</p>
-                <progress value="5" max="100" class="media-progress3"></progress>
+                <progress value="{{ $user_id->progressvalue3 }}" max="100" class="media-progress3"></progress>
                 <div id="progress-value3"></div>
 
                 <input type="hidden"  id="progressvalue3" name="progressvalue3">
 
                 <p class="mt-1 mb-1" style="font-size: .77rem;">Mobile Template</p>
-                <progress value="5" max="100" class="media-progress4"></progress>
+                <progress value="{{ $user_id->progressvalue4 }}" max="100" class="media-progress4"></progress>
                 <div id="progress-value4"></div>
 
                 <input type="hidden"  id="progressvalue4" name="progressvalue4">
 
 
                 <p class="mt-1 mb-1" style="font-size: .77rem;">Backend API</p>
-                <progress value="5" max="100" class="media-progress5"></progress>
+                <progress value="{{ $user_id->progressvalue5 }}" max="100" class="media-progress5"></progress>
                 <div id="progress-value5"></div>
 
                 <input type="hidden"  id="progressvalue5" name="progressvalue5">

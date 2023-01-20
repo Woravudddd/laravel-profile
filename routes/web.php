@@ -6,6 +6,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StoreItemController;
+use GuzzleHttp\Promise\Create;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 
@@ -23,6 +25,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
 
 Route::group(['namespace' => 'App\Http\Controllers'], function()
 {   
@@ -55,11 +59,15 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          */
         Route::get('/cardprofile' , [ProfileController::class, 'cardindex'])->name('cardprofile.login');
         Route::get('profile' , [ProfileController::class, 'index'])->name('profile.login');
+       
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
         Route::get('home/createitem' , [StoreItemController::class, 'index']);
         Route::get('/member' , [MemberController::class, 'index']);
         Route::post('/profile/createprofile' , [CreateProfileController::class, 'index'])->name('create.profile');
-        Route::get('/profile/{id}/edit' , [CreateProfileController::class, 'edit'])->name('edit.profile');
+        Route::get('/profile/edit/{id}' , [CreateProfileController::class, 'edit'])->name('edit.profile');
+        Route::post('/profile/update/{id}' , [CreateProfileController::class, 'updateProfile'])->name('update.profile');
+        Route::post('/profile/delete/{id}',[CreateProfileController::class , 'destroy'])->name('destroy.profile');
+        Route::get('/card/profile/{id}' , [ProfileController::class , 'profileincard'])->name('profileincard.card');
 
 
     });
