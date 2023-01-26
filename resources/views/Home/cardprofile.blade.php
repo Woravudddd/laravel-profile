@@ -14,11 +14,11 @@
         <p class="card-text">Profile</p>
         <ul class="list-group list-group-flush rounded ">
               <li class="list-group-item align-items-center p-2">
-                <i class="fas fa-globe fa-lg text-warning"></i>
+              <i class="fa-solid fa-lock"></i>
                 <p class="mb-0">ตำแหน่งที่เคยทำ : {{ $profilecards->position }}</p>
               </li>
               <li class="list-group-item align-items-center p-2">
-                <i class="fas fa-globe fa-lg text-warning"></i>
+              <i class="fa-solid fa-phone"></i>
                 <p class="mb-0">เบอร์โทร :  {{ $profilecards->phone1 }}</p>
               </li>
          </ul>

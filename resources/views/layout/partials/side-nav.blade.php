@@ -13,27 +13,31 @@
       </a>
       @endauth
      <li  class="nav-link">
-        <i class="bx bxs-dashboard"></i>
+     <i class="fa-solid fa-house"></i>
         <a href="/">
         <span class="mx-2">Home</span></a>
       </li>
       @auth
       {{auth()->user()->name}}
      <li  class="nav-link">
-        <i class="bx bx-user-check"></i>
-        <a href="{{ route('profile.login') }}">   <span class="mx-2">All Profile</span></a>
+     <i class="fa-solid fa-user"></i>
+        <a href="{{ route('profile.login') }}">   <span class="mx-2">My Profile</span></a>
       </li>
      <li class="nav-link">
-      <a href="{{ route('editprofilepage', Auth::user()->username ) }}">  <i class="bx bx-conversation"></i>
+      <a href="{{ route('editprofilepage', Auth::user()->username ) }}"> 
+          <i class="fa-solid fa-pen"></i>
         <span class="mx-2">Edit</span></a>
       </li>
       <li class="nav-link">
-      <a href="/home/createitem">  <i class="bx bx-conversation"></i>
+      <a href="/home/createitem"> 
+        <i class="fa-solid fa-arrow-up"></i>
         <span class="mx-2">Create</span></a>
       </li>
       <li class="nav-link">
-      <a href="{{ route('cardprofile.login') }}">  <i class="bx bx-conversation"></i>
-        <span class="mx-2">Your Profile</span></a>
+      <a href="{{ route('cardprofile.login') }}"> 
+        <i class="fa-solid fa-eye"></i>
+        <span class="mx-2">
+Other Profile</span></a>
       </li>
     </ul>
     @endauth

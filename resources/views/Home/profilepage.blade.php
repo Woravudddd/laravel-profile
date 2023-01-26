@@ -28,13 +28,7 @@ Swal.fire({
             <p class="text-muted mb-1">{{ $profiles->position }}</p>
             <p class="text-muted mb-4">{{ $profiles->address }}</p>
             <div class="d-flex justify-content-center mb-2">
-            <a href="{{ route('edit.profile',$profiles->id)}}" class="btn btn-outline-warning "> Edit </a>
-            <form action="{{ route('destroy.profile', $profiles->id)}}" method="post">
-                  @csrf
-                  
-                  <button class="btn btn-outline-danger ms-1" type="submit">Delete</button>
-                </form>
-          
+               
             </div>
           </div>
         </div>
@@ -44,60 +38,60 @@ Swal.fire({
             <ul class="list-group list-group-flush rounded-3 ">
             @if($profiles->hobby1 != NULL)
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fas fa-globe fa-lg text-warning"></i>
+              <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0">{{ $profiles->hobby1 }}</p>
               </li>
         @endif  
         @if($profiles->hobby2 != NULL)    
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-github fa-lg" style="color: #333333;"></i>
+              <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0">{{ $profiles->hobby2 }}</p>
               </li>
               @endif  
         @if($profiles->hobby3 != NULL)  
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
+              <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0">{{ $profiles->hobby3 }}</p>
               </li>
               @endif  
         @if($profiles->hobby4 != NULL)  
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
+              <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0">{{ $profiles->hobby4 }}</p>
               </li>
               @endif  
         @if($profiles->hobby5 != NULL)  
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+              <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0">{{ $profiles->hobby5 }}</p>
               </li>
          @endif 
          @if($profiles->hobby6 != NULL)  
          <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+         <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0">{{ $profiles->hobby6 }}</p>
               </li>
          @endif    
          @if($profiles->hobby1 == NULL && $profiles->hobby2 == NULL && $profiles->hobby3 == NULL
               && $profiles->hobby4 == NULL && $profiles->hobby5 == NULL && $profiles->hobby6 == NULL)  
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+              <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0"></p>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+               <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0"></p>
               </li>
               <li class="list-group-item text-center d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+               <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0 ">ไม่มี</p>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+               <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0"></p>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+               <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0"></p>
               </li>
          @endif     

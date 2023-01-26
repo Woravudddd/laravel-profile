@@ -16,7 +16,7 @@ class CreateProfileController extends Controller
       
 
        $user = Profile::create($request->all());
-       dd($user);
+      
        
        return redirect('/home')->with('success','บันทึกข้อมูลสำเร็จ')->with( 'user', $user )
        ;

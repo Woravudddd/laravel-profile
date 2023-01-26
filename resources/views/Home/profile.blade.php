@@ -81,23 +81,23 @@ Swal.fire({
          @if($profiles->hobby1 == NULL && $profiles->hobby2 == NULL && $profiles->hobby3 == NULL
               && $profiles->hobby4 == NULL && $profiles->hobby5 == NULL && $profiles->hobby6 == NULL)  
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+                <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0"></p>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+                <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0"></p>
               </li>
               <li class="list-group-item text-center d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+                <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0 ">ไม่มี</p>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+                <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0"></p>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+              <i class="fa-solid fa-pen-nib"></i>
                 <p class="mb-0"></p>
               </li>
          @endif     

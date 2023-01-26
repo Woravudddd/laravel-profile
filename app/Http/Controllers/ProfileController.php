@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\Profile;
+use App\Models\User;
 
 
 use Illuminate\Support\Facades\Redirect;
@@ -19,7 +20,7 @@ class ProfileController extends Controller
 
         
                 
-        $profile = DB::table('profiles')->get();
+        $profile = DB::table('profiles')->where('create_by' , $user_name )->get();
         
         
         return view('Home.profile',compact('profile'));
@@ -28,9 +29,11 @@ class ProfileController extends Controller
       
         $user_name = Auth::user()->username;
 
-        $profilecard = DB::table('profiles')->where('create_by' , $user_name )->get();
+        $profilecard = DB::table('profiles')->get();
 
-        return view('Home.cardprofile',compact('profilecard'));
+           
+
+        return view('Home.cardprofile',compact('profilecard','user_name'));
 
     }
   
@@ -50,10 +53,37 @@ class ProfileController extends Controller
 
         $profilecard = DB::table('users')->where('username' ,$username )->first();
         
-
+     
       
 
         return view('Home.editProfilePage',compact('profilecard'));
 
     }
+
+    public function updateProfileUser(Request $request ,$id){
+         
+        $user_id = User::find($id);
+
+        $user_id->fristname =$request->get('fristname');
+        $user_id->lastname =$request->get('lastname');
+        $user_id->phone = $request->get('phone');
+        $user_id->dob = $request->get('dob');
+        $user_id->save();
+        
+       
+
+   
+
+        
+        
+        
+
+
+        return redirect('/profile/editprofile/'.$user_id->username)->with('success','update successfully');
+
+
+
+       
+    }
+  
 }

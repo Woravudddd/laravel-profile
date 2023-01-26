@@ -16,6 +16,7 @@ class RegisterController extends Controller
      */
     public function show()
     {
+        
         return view('Home.register');
     }
 
@@ -26,12 +27,18 @@ class RegisterController extends Controller
      * 
      * @return \Illuminate\Http\Response
      */
-    public function register(RegisterRequest $request) 
+    public function register(Request $request) 
     {
-        $user = User::create($request->validated());
+      
+       
+        $user = User::create($request->all());
 
+
+    
        // auth()->login($user);
        if(!$user){
+           
+           echo '<script> console.log("error") </script>';
            Session::flash('error', "Worng");
 
            return redirect('/register')->with('error', "Account successfully registered.");
