@@ -2,13 +2,13 @@
 
 
 ## HOW TO CLONE LARAVEL PORJECT FORM GITHUB ?
-##Clone this project
-##Run composer install on your cmd or terminal
-## copy .env.example .env 
-## Check you DATABASE NAME , PASSWORD in .env file 
-##Run php artisan key:generate
-##Run php artisan migrate
-##Run php artisan serve
+-Clone this project
+-Run composer install on your cmd or terminal
+-copy .env.example .env 
+-Check you DATABASE NAME , PASSWORD in .env file 
+-Run php artisan key:generate
+-Run php artisan migrate
+-Run php artisan serve
 
 
 
