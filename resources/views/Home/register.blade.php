@@ -1,6 +1,18 @@
 @extends('layout.mainlayout')
 
 @section('content')
+     @if (Session::has('error'))
+     <script type="text/javascript">
+
+        Swal.fire({
+          icon: 'error',
+          title: 'Duplicate Email!!!',
+          text: 'มีการใช้งาน Email นี้แล้ว ',
+          footer: '<a href="">Why do I have this issue?</a>'
+        });
+        
+        </script>
+        @endif
     <form method="post" action="{{ route('register.perform') }}">
 
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
